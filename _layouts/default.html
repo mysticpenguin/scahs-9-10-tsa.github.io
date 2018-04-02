@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+  <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+    <div class="container">
+      <a class="navbar-brand" href="/"><b>{{ site.title }}</b><br></a> <a class="navbar-brand" href="#"></a> <button aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navbar2SupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/chapter">Our Chapter<br></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/stem">STEM Program<br></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link text-white" href="/ai" role="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artificial Intelligence</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown3">
+              <a class="dropdown-item" href="/ai/costs-tech">Costs and Technologies</a>
+              <a class="dropdown-item" href="/ai/benefits-uses">Benefits and Uses</a>
+              <a class="dropdown-item" href="/ai/safety">Safety</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/about">About<br></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {{ content }}
+  <style type="text/css">
+    @media only screen and (min-width:769px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .dropdown-submenu {
+        position: relative !important;
+      }
+      .dropdown-submenu>.dropdown-menu {
+        top: 0 !important;
+        left: 100% !important;
+        margin-top: -6px !important;
+        margin-left: -1px !important;
+        border-radius: 0 !important;
+      }
+      .dropdown-submenu:hover>.dropdown-menu {
+        display: block !important;
+      }
+      .dropdown-submenu>a:after {
+        display: block;
+        content: "\f105";
+        font-family: 'FontAwesome';
+        margin-top: -18px;
+        right: 15px;
+        position: absolute;
+        font-weight: 300;
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    jQuery(function($) {
+      if ($(window).width() > 769) {
+        $('.navbar .dropdown').hover(function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+    
+        }, function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+    
+        });
+    
+        $('.navbar .dropdown > a').click(function() {
+          location.href = this.href;
+        });
+    
+      }
+    });
+  </script>
+  <footer class="footer bg-dark">
+    <div class="container p-2 justify-content-center align-items-center text-center">
+      <p class="text-white m-0"><small>This site was built by team 2045-901 for Webmaster. <a href="/about">Full info and documents.</a></small></p>
+    </div>
+  </footer>
+</body>
+</html>
