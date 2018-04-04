@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
-  <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
+  <link href={{ "/assets/css/style.css" | relative_url }} rel="stylesheet" type="text/css">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
@@ -13,30 +13,30 @@
 <body class="bg-light">
   <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
     <div class="container">
-      <a class="navbar-brand" href="/"><b>{{ site.title }}</b><br></a> <a class="navbar-brand" href="#"></a> <button aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navbar2SupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand" href="/index.html"><b>{{ site.title }}</b><br></a> <a class="navbar-brand" href="/index.html"></a> <button aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navbar2SupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
         <ul class="nav navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white" href="/chapter">Our Chapter<br></a>
+            <a class="nav-link text-white" href={{ "/chapter" | relative_url }}>Our Chapter<br></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link text-white" href="/stem" role="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STEM Program</a>
+            <a class="dropdown-toggle nav-link text-white" href={{ "/stem" | relative_url}} role="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STEM Program</a>
             <div class="dropdown-menu" aria-labelledby="dropdown3">
-              <a class="dropdown-item" href="/stem/classes">Courses</a>
-              <a class="dropdown-item" href="/stem/teachers">Teachers</a>
-              <a class="dropdown-item" href="/stem/activities">Other Activities</a>
+              <a class="dropdown-item" href={{ "/stem/classes" | relative_url }}>Courses</a>
+              <a class="dropdown-item" href={{ "/stem/teachers" | relative_url }}>Teachers</a>
+              <a class="dropdown-item" href={{ "/stem/activities" | relative_url }}>Other Activities</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link text-white" href="/ai" role="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artificial Intelligence</a>
+            <a class="dropdown-toggle nav-link text-white" href={{ "/ai" | relative_url }} role="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artificial Intelligence</a>
             <div class="dropdown-menu" aria-labelledby="dropdown3">
-              <a class="dropdown-item" href="/ai/costs-tech">Costs and Technologies</a>
-              <a class="dropdown-item" href="/ai/benefits-uses">Benefits and Uses</a>
-              <a class="dropdown-item" href="/ai/safety">Safety</a>
+              <a class="dropdown-item" href={{ "/ai/costs-tech" | relative_url }}>Costs and Technologies</a>
+              <a class="dropdown-item" href={{ "/ai/benefits-uses" | relative_url }}>Benefits and Uses</a>
+              <a class="dropdown-item" href={{ "/ai/safety" | relative_url }}>Safety</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/about">About<br></a>
+            <a class="nav-link text-white" href={{ "/about" | relative_url }}>About<br></a>
           </li>
         </ul>
       </div>
@@ -92,7 +92,7 @@
   </script>
   <footer class="footer bg-dark">
     <div class="container p-2 justify-content-center align-items-center text-center">
-      <p class="text-white m-0"><small>This site was built by team 2045-901 for Webmaster. <a href="/about">Full info and documents.</a></small></p>
+      <p class="text-white m-0"><small>This site was built by team 2045-901 for Webmaster. <a href={{ "/about" | relative_url }}>Full info and documents.</a></small></p>
     </div>
   </footer>
 </body>
